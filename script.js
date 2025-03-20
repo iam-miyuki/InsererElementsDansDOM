@@ -22,19 +22,32 @@ newDiv.append(newH2, newButton, img);
 
 // Je crée la fonction
 function toggleImg() {
-    if(newButton.textContent == textRemoveImg){
-        img.remove()
-        newButton.textContent = textShowImg
-    } else{
-        document.querySelector('#myDiv2').append(img)
-        newButton.textContent = textRemoveImg
-    }
+  if (newButton.textContent == textRemoveImg) {
+    img.remove();
+    newButton.textContent = textShowImg;
+  } else {
+    newDiv.append(img);
+    newButton.textContent = textRemoveImg;
+  }
 }
 newButton.onclick = toggleImg;
 
+/*
+ CORRECTION : Version ecouteur d'evenement 
+newButton.addEventListener("click", function(){
+    if (newButton.textContent == textRemoveImg) {
+        img.remove();
+        newButton.textContent = textShowImg;
+      } else {
+        newDiv.append(img);
+        newButton.textContent = textRemoveImg;
+      }
+};
+*/
+
 // J'insère les nouvelles élements au DOM
-document.querySelector('#myDiv').append(newP);
-document.querySelector('#myDiv').after(newDiv);
+document.querySelector("#myDiv").append(newP);
+document.querySelector("#myDiv").after(newDiv);
 
 // console.log(newP);
 // console.log(newDiv);
