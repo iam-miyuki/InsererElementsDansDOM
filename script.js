@@ -32,8 +32,8 @@ function toggleImg() {
 }
 newButton.onclick = toggleImg;
 
-/*
- CORRECTION : Version ecouteur d'evenement 
+
+//  CORRECTION : Version ecouteur d'evenement 
 newButton.addEventListener("click", function(){
     if (newButton.textContent == textRemoveImg) {
         img.remove();
@@ -42,8 +42,8 @@ newButton.addEventListener("click", function(){
         newDiv.append(img);
         newButton.textContent = textRemoveImg;
       }
-};
-*/
+});
+
 
 // J'insère les nouvelles élements au DOM
 document.querySelector("#myDiv").append(newP);
